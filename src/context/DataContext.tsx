@@ -4,7 +4,7 @@ import { useAuth } from "./AuthContext";
 import axios from "axios";
 import { toast } from "../hooks/use-toast";
  
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "http://localhost:8081/api";
  
 interface DataContextType {
   posts: Post[];
