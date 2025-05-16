@@ -63,14 +63,14 @@ const QuizComponent = () => {
   if (!isStarted) {
     return (
       <div className="text-center p-8">
-        <Card className="max-w-md mx-auto plant-shadow border-green-100">
+        <Card className="max-w-md mx-auto plant-shadow border-indigo-100">
           <CardHeader>
             <CardTitle>Plant Knowledge Quiz</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="mb-4">Test your knowledge with 10 random questions about plants!</p>
             <Button 
-              className="bg-green-600 hover:bg-green-700"
+              className="bg-indigo-600 hover:bg-indigo-700"
               onClick={handleStartQuiz}
               disabled={isLoading}
             >
@@ -97,10 +97,10 @@ const QuizComponent = () => {
   if (currentQuiz.length === 0) {
     return (
       <div className="text-center p-8">
-        <Card className="max-w-md mx-auto plant-shadow border-green-100">
+        <Card className="max-w-md mx-auto plant-shadow border-indigo-100">
           <CardContent className="py-8">
             <div className="flex flex-col items-center">
-              <div className="animate-spin rounded-full h-10 w-10 border-4 border-green-600 border-t-transparent mb-4"></div>
+              <div className="animate-spin rounded-full h-10 w-10 border-4 border-indigo-600 border-t-transparent mb-4"></div>
               <p>Loading questions...</p>
             </div>
           </CardContent>
@@ -119,12 +119,12 @@ const QuizComponent = () => {
         <h3 className="text-lg font-semibold">
           Question {currentQuestionIndex + 1} of {currentQuiz.length}
         </h3>
-        <span className="text-green-600 font-medium">Score: {quizScore}</span>
+        <span className="text-indigo-600 font-medium">Score: {quizScore}</span>
       </div>
       
-      <Progress value={progressPercentage} className="h-2 mb-4 bg-green-100" />
+      <Progress value={progressPercentage} className="h-2 mb-4 bg-indigo-100" />
             
-      <Card className="mb-6 plant-shadow border-green-100">
+      <Card className="mb-6 plant-shadow border-indigo-100">
         <CardHeader>
           <CardTitle className="text-lg">{currentQuestion.questionText}</CardTitle>
         </CardHeader>
@@ -134,7 +134,7 @@ const QuizComponent = () => {
               key={index}
               variant={selectedAnswer === option ? "default" : "outline"}
               className={`w-full justify-start font-normal ${
-                selectedAnswer === option ? "bg-green-600 hover:bg-green-700" : "hover:border-green-600 hover:text-green-600"
+                selectedAnswer === option ? "bg-indigo-600 hover:bg-indigo-700" : "hover:border-indigo-600 hover:text-indigo-600"
               }`}
               onClick={() => setSelectedAnswer(option)}
             >
@@ -142,7 +142,7 @@ const QuizComponent = () => {
             </Button>
           ))}
           <Button
-            className="w-full bg-green-600 hover:bg-green-700 mt-6"
+            className="w-full bg-indigo-600 hover:bg-indigo-700 mt-6"
             onClick={handleNextQuestion}
             disabled={!selectedAnswer}
           >

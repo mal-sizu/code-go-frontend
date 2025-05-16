@@ -57,7 +57,7 @@ const CreatePostForm = () => {
   };
 
   return (
-    <Card className="mb-6 border-green-100 plant-shadow">
+    <Card className="mb-6 border-indigo-100 plant-shadow">
       <CardHeader className="pb-2">
         <CardTitle className="text-lg">Share Your Plantation Journey</CardTitle>
       </CardHeader>
@@ -67,7 +67,7 @@ const CreatePostForm = () => {
           {!isExpanded ? (
             <Textarea
               placeholder="What's on your mind about plants today?"
-              className="resize-none border-green-200 focus-visible:ring-green-500"
+              className="resize-none border-indigo-200 focus-visible:ring-indigo-500"
               onFocus={() => setIsExpanded(true)}
             />
           ) : (
@@ -76,7 +76,7 @@ const CreatePostForm = () => {
                 placeholder="Post Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="border-green-200 focus-visible:ring-green-500"
+                className="border-indigo-200 focus-visible:ring-indigo-500"
                 required
               />
               
@@ -85,14 +85,14 @@ const CreatePostForm = () => {
                 accept="image/*"
                 onChange={handleFileChange}
                 ref={fileInputRef}
-                className="border-green-200 focus-visible:ring-green-500"
+                className="border-indigo-200 focus-visible:ring-indigo-500"
               />
               
               <Textarea
                 placeholder="Share your thoughts, tips, or questions..."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="resize-none border-green-200 focus-visible:ring-green-500"
+                className="resize-none border-indigo-200 focus-visible:ring-indigo-500"
                 rows={3}
                 required
               />
@@ -113,7 +113,7 @@ const CreatePostForm = () => {
                 </Button>
                 <Button
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700"
+                  className="bg-indigo-600 hover:bg-indigo-700"
                 >
                   Post
                 </Button>

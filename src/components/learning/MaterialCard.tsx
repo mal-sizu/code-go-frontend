@@ -125,8 +125,8 @@ const MaterialCard = ({ material }: MaterialCardProps) => {
   };
 
   return (
-    <Card className="mb-6 overflow-hidden plant-card border-green-100">
-      <div className="flex items-center justify-between p-4 border-b border-green-100">
+    <Card className="mb-6 overflow-hidden plant-card border-indigo-100">
+      <div className="flex items-center justify-between p-4 border-b border-indigo-100">
         <div className="flex items-center space-x-3">
           <Avatar>
             <AvatarImage src={material.userProfileImage} alt={material.username || ''} />
@@ -185,9 +185,9 @@ const MaterialCard = ({ material }: MaterialCardProps) => {
           <>
             <div className="flex items-center gap-2 mb-4">
               {material.fileType === 'pdf' ? (
-                <FileText className="h-6 w-6 text-green-600" />
+                <FileText className="h-6 w-6 text-indigo-600" />
               ) : (
-                <Link className="h-6 w-6 text-green-600" />
+                <Link className="h-6 w-6 text-indigo-600" />
               )}
               <h3 className="text-lg font-semibold">{material.title}</h3>
             </div>
@@ -196,7 +196,7 @@ const MaterialCard = ({ material }: MaterialCardProps) => {
             
             <Button
               variant="outline"
-              className="w-full justify-start text-green-600 hover:text-green-700 border-green-200 hover:border-green-300"
+              className="w-full justify-start text-indigo-600 hover:text-indigo-700 border-indigo-200 hover:border-indigo-300"
               onClick={() => window.open(material.fileUrl, '_blank')}
             >
               {material.fileType === 'pdf' ? 'Open PDF' : 'Open Link'}
@@ -212,7 +212,7 @@ const MaterialCard = ({ material }: MaterialCardProps) => {
                 onChange={(e) => handleFormChange('title', e.target.value)}
                 placeholder="Enter material title"
                 disabled={isSubmitting}
-                className="w-full border-green-200 focus:border-green-400"
+                className="w-full border-indigo-200 focus:border-indigo-400"
               />
             </div>
             
@@ -224,7 +224,7 @@ const MaterialCard = ({ material }: MaterialCardProps) => {
                 onChange={(e) => handleFormChange('description', e.target.value)}
                 placeholder="Enter material description"
                 disabled={isSubmitting}
-                className="w-full border-green-200 focus:border-green-400"
+                className="w-full border-indigo-200 focus:border-indigo-400"
                 rows={3}
               />
             </div>
@@ -242,7 +242,7 @@ const MaterialCard = ({ material }: MaterialCardProps) => {
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-green-600 hover:bg-green-700 text-white"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white"
               >
                 {isSubmitting ? 'Saving...' : 'Save Changes'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}

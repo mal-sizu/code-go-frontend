@@ -311,8 +311,8 @@ const PollCard = ({ poll, onDelete, onEdit }: PollCardProps) => {
   };
 
   return (
-    <Card className="mb-6 border-green-100 plant-shadow">
-      <div className="flex items-center justify-between p-4 border-b border-green-100">
+    <Card className="mb-6 border-indigo-100 plant-shadow">
+      <div className="flex items-center justify-between p-4 border-b border-indigo-100">
         <div className="flex items-center gap-3">
           <Avatar>
             <AvatarImage src={localPoll.userProfileImage} alt={localPoll.username} />
@@ -391,14 +391,14 @@ const PollCard = ({ poll, onDelete, onEdit }: PollCardProps) => {
                 return (
                   <div key={option.id} className="relative">
                     {isSelected ? (
-                      <div className={`border rounded-lg p-3 space-y-1 ${isPending ? 'border-yellow-300 bg-yellow-50' : 'border-green-300 bg-green-50'}`}>
+                      <div className={`border rounded-lg p-3 space-y-1 ${isPending ? 'border-yellow-300 bg-yellow-50' : 'border-indigo-300 bg-indigo-50'}`}>
                         <div className="flex justify-between mb-1">
                           <span>{option.text} {isPending && <span className="text-xs text-yellow-600">(pending...)</span>}</span>
                           <span className="font-medium">{percentage}%</span>
                         </div>
                         <Progress 
                           value={percentage} 
-                          className={`h-2 ${isPending ? 'bg-yellow-100' : 'bg-green-100'}`}
+                          className={`h-2 ${isPending ? 'bg-yellow-100' : 'bg-indigo-100'}`}
                         />
                         <div className="text-xs text-gray-500 text-right mt-1">
                           {option.votes.length} {option.votes.length === 1 ? 'vote' : 'votes'}
@@ -407,7 +407,7 @@ const PollCard = ({ poll, onDelete, onEdit }: PollCardProps) => {
                     ) : (
                       <Button
                         variant="outline"
-                        className="w-full justify-start font-normal hover:bg-green-50 hover:text-green-700 hover:border-green-300"
+                        className="w-full justify-start font-normal hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300"
                         onClick={() => handleVote(option.id)}
                         disabled={!currentUser || isVoting}
                       >

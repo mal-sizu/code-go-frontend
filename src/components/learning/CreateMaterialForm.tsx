@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useData } from "../../context/DataContext";
 import { Button } from "@/components/ui/button";
@@ -77,7 +76,7 @@ const CreateMaterialForm = () => {
   };
 
   return (
-    <Card className="mb-6 border-green-100 plant-shadow">
+    <Card className="mb-6 border-indigo-100 plant-shadow">
       <CardHeader className="pb-2">
         <CardTitle className="text-lg">Share Learning Materials</CardTitle>
       </CardHeader>
@@ -87,7 +86,7 @@ const CreateMaterialForm = () => {
           {!isExpanded ? (
             <Input
               placeholder="Share a useful resource about plantation..."
-              className="border-green-200 focus-visible:ring-green-500"
+              className="border-indigo-200 focus-visible:ring-indigo-500"
               onFocus={() => setIsExpanded(true)}
             />
           ) : (
@@ -96,14 +95,14 @@ const CreateMaterialForm = () => {
                 placeholder="Title of the learning material"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="border-green-200 focus-visible:ring-green-500"
+                className="border-indigo-200 focus-visible:ring-indigo-500"
               />
               
               <Textarea
                 placeholder="Brief description of the resource"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="resize-none border-green-200 focus-visible:ring-green-500"
+                className="resize-none border-indigo-200 focus-visible:ring-indigo-500"
                 rows={2}
               />
               
@@ -126,7 +125,7 @@ const CreateMaterialForm = () => {
                 placeholder={fileType === "pdf" ? "URL to PDF document" : "URL to website resource"}
                 value={fileUrl}
                 onChange={(e) => setFileUrl(e.target.value)}
-                className="border-green-200 focus-visible:ring-green-500"
+                className="border-indigo-200 focus-visible:ring-indigo-500"
               />
               
               <div className="flex justify-end space-x-2">
@@ -139,7 +138,7 @@ const CreateMaterialForm = () => {
                 </Button>
                 <Button
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700"
+                  className="bg-indigo-600 hover:bg-indigo-700"
                   disabled={!title.trim() || !description.trim() || !fileUrl.trim()}
                 >
                   Share Resource

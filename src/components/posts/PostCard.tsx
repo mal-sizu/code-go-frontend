@@ -84,8 +84,8 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
   };
 
   return (
-    <Card className="mb-6 overflow-hidden plant-card border-green-100">
-      <div className="flex items-center justify-between p-4 border-b border-green-100">
+    <Card className="mb-6 overflow-hidden plant-card border-indigo-100">
+      <div className="flex items-center justify-between p-4 border-b border-indigo-100">
         <div className="flex items-center space-x-3">
           <Avatar>
             <AvatarImage src={post.userProfileImage} alt={post.username} />
@@ -128,7 +128,7 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
               size="sm" 
               variant={isFollowing ? "outline" : "default"}
               onClick={handleFollowToggle}
-              className={isFollowing ? "border-green-500 text-green-500" : "bg-green-500 hover:bg-green-600"}
+              className={isFollowing ? "border-indigo-500 text-indigo-500" : "bg-indigo-500 hover:bg-indigo-600"}
             >
               {isFollowing ? "Unfollow" : "Follow"}
             </Button>
@@ -145,7 +145,7 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
                 id="title"
                 value={editedTitle}
                 onChange={(e) => setEditedTitle(e.target.value)}
-                className="w-full border-green-200"
+                className="w-full border-indigo-200"
               />
             </div>
             
@@ -155,7 +155,7 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
                 id="description"
                 value={editedDescription}
                 onChange={(e) => setEditedDescription(e.target.value)}
-                className="w-full resize-none border-green-200"
+                className="w-full resize-none border-indigo-200"
                 rows={4}
               />
             </div>
@@ -172,7 +172,7 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
               <Button 
                 size="sm" 
                 onClick={handleSaveEdit}
-                className="bg-green-600 hover:bg-green-700"
+                className="bg-indigo-600 hover:bg-indigo-700"
                 disabled={!editedTitle.trim() || !editedDescription.trim()}
               >
                 Save Changes
@@ -199,7 +199,7 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
       </CardContent>
 
       <CardFooter className="flex flex-col p-0">
-        <div className="flex items-center justify-between p-4 border-t border-green-100">
+        <div className="flex items-center justify-between p-4 border-t border-indigo-100">
           <div className="flex space-x-4">
             <Button 
               variant="ghost" 
@@ -232,12 +232,12 @@ const PostCard = ({ post, onDelete, onEdit }: PostCardProps) => {
                   placeholder="Add a comment..."
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
-                  className="resize-none border-green-200"
+                  className="resize-none border-indigo-200"
                   rows={1}
                 />
                 <Button
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700 shrink-0"
+                  className="bg-indigo-600 hover:bg-indigo-700 shrink-0"
                   disabled={!comment.trim()}
                 >
                   Post

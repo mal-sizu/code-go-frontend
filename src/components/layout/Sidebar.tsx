@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Home, PieChart, FileText, HelpCircle, User } from "lucide-react";
@@ -50,8 +49,8 @@ const Sidebar = () => {
               className={cn(
                 "flex items-center gap-x-2 text-sm font-medium py-3 px-4 rounded-md transition-colors",
                 route.active
-                  ? "bg-green-100 text-green-900"
-                  : "text-gray-700 hover:bg-green-50 hover:text-green-900"
+                  ? "bg-indigo-100 text-indigo-900"
+                  : "text-gray-700 hover:bg-indigo-50 hover:text-indigo-900"
               )}
             >
               {route.icon}

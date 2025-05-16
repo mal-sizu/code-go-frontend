@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useData } from "../../context/DataContext";
 import { v4 as uuidv4 } from "uuid";
@@ -77,7 +76,7 @@ const CreatePollForm = () => {
   const isValid = question.trim() && options.filter(o => o.text.trim()).length >= 2;
 
   return (
-    <Card className="mb-6 border-green-100 plant-shadow">
+    <Card className="mb-6 border-indigo-100 plant-shadow">
       <CardHeader className="pb-2">
         <CardTitle className="text-lg">Create a Poll</CardTitle>
       </CardHeader>
@@ -87,7 +86,7 @@ const CreatePollForm = () => {
           {!isExpanded ? (
             <Input
               placeholder="Ask a question about plantation..."
-              className="border-green-200 focus-visible:ring-green-500"
+              className="border-indigo-200 focus-visible:ring-indigo-500"
               onFocus={() => setIsExpanded(true)}
             />
           ) : (
@@ -96,7 +95,7 @@ const CreatePollForm = () => {
                 placeholder="Your poll question"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                className="border-green-200 focus-visible:ring-green-500"
+                className="border-indigo-200 focus-visible:ring-indigo-500"
               />
               
               <div className="space-y-2">
@@ -106,7 +105,7 @@ const CreatePollForm = () => {
                       placeholder={`Option ${index + 1}`}
                       value={option.text}
                       onChange={(e) => handleOptionChange(option._id, e.target.value)}
-                      className="border-green-200 focus-visible:ring-green-500"
+                      className="border-indigo-200 focus-visible:ring-indigo-500"
                     />
                     {options.length > 2 && (
                       <Button
@@ -129,7 +128,7 @@ const CreatePollForm = () => {
                   variant="outline"
                   size="sm"
                   onClick={handleAddOption}
-                  className="w-full text-green-600 border-green-200 hover:bg-green-50 hover:text-green-700"
+                  className="w-full text-indigo-600 border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Option
@@ -146,7 +145,7 @@ const CreatePollForm = () => {
                 </Button>
                 <Button
                   type="submit"
-                  className="bg-green-600 hover:bg-green-700"
+                  className="bg-indigo-600 hover:bg-indigo-700"
                   disabled={!isValid}
                 >
                   Create Poll

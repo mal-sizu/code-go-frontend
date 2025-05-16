@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { User } from "../../types";
 import { useAuth } from "../../context/AuthContext";
@@ -47,7 +46,7 @@ const ProfileHeader = ({ user }: ProfileHeaderProps) => {
     <>
       <div className="bg-white shadow rounded-lg p-6 mb-6 plant-shadow">
         <div className="flex flex-col md:flex-row items-center">
-          <Avatar className="h-20 w-20 md:h-24 md:w-24 border-4 border-green-100">
+          <Avatar className="h-20 w-20 md:h-24 md:w-24 border-4 border-indigo-100">
             <AvatarImage src={user.profileImage} alt={user.username} />
             <AvatarFallback className="text-2xl">{user.username.substring(0, 2).toUpperCase()}</AvatarFallback>
           </Avatar>
@@ -72,7 +71,7 @@ const ProfileHeader = ({ user }: ProfileHeaderProps) => {
             {isOwnProfile ? (
               <Dialog open={editOpen} onOpenChange={setEditOpen}>
                 <DialogTrigger asChild>
-                  <Button variant="outline" className="border-green-200 hover:bg-green-50 hover:text-green-700">
+                  <Button variant="outline" className="border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700">
                     Edit Profile
                   </Button>
                 </DialogTrigger>
@@ -88,7 +87,7 @@ const ProfileHeader = ({ user }: ProfileHeaderProps) => {
                         placeholder="https://example.com/image.jpg"
                         value={profileImage}
                         onChange={(e) => setProfileImage(e.target.value)}
-                        className="border-green-200"
+                        className="border-indigo-200"
                       />
                     </div>
                     <div className="space-y-2">
@@ -98,7 +97,7 @@ const ProfileHeader = ({ user }: ProfileHeaderProps) => {
                         placeholder="Tell us about yourself"
                         value={bio}
                         onChange={(e) => setBio(e.target.value)}
-                        className="border-green-200"
+                        className="border-indigo-200"
                         rows={3}
                       />
                     </div>
@@ -112,7 +111,7 @@ const ProfileHeader = ({ user }: ProfileHeaderProps) => {
                       </Button>
                       <Button
                         type="submit"
-                        className="bg-green-600 hover:bg-green-700"
+                        className="bg-indigo-600 hover:bg-indigo-700"
                       >
                         Save Changes
                       </Button>
@@ -123,8 +122,8 @@ const ProfileHeader = ({ user }: ProfileHeaderProps) => {
             ) : (
               <Button
                 className={isFollowing 
-                  ? "border-green-500 text-green-500" 
-                  : "bg-green-600 hover:bg-green-700"}
+                  ? "border-indigo-500 text-indigo-500" 
+                  : "bg-indigo-600 hover:bg-indigo-700"}
                 variant={isFollowing ? "outline" : "default"}
                 onClick={handleFollowToggle}
                 disabled={!currentUser}
